@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>使用者介面</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.0/semantic.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <style>
+
+    </style>
+    
+</head>
+<body>
+            
+    <div class="container">
+        <div class="row">
+            <div class="ui fixed menu navbar">
+                <div class="container">
+                    <a href="/" class="item">首頁</a>
+                    <div class="col-md-2 offset-md-4 form-group" style="margin-top: 7px">
+                        <input type="text" class="form-control" placeholder="請輸入關鍵字">
+                    </div>
+                    <div class="col">
+                       <button type="submit" class="btn btn-default">搜尋</button>
+                    </div>
+                    <div class="right menu">
+                        <a href="/users/logout" class="item">登出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+            <div class="row" style="margin-top:90px">
+            <div class="col-sm-3">
+                <!--left col-->
+                <div class="card">
+                    <div class="card-body p-0" >
+                        <li class="list-group-item text-center"><h4>Profile</h4></li>
+                        <dd class="list-group-item"><strong>名字</strong><i class="fa fa-pencil float-right"></i><span class="float-right">承寰 </span></dd>
+                        <dd class="list-group-item"><strong>學號</strong><span class="float-right">11111</span></dd>
+                        
+                       
+                    </div>
+                </div>
+
+                <div class="card  " style="margin-top:30px">
+                    <div class="card-body p-0 list-group">
+                    <li class="list-group-item text-center"><h4>功能表</h4></li>
+                    <button type="button" id="cls"class="list-group-item list-group-item-action text-center"><i class="fa fa-book"></i><strong>課程</strong></button>
+                    <button type="button" id="choose" style="display: none"  class="list-group-item list-group-item-action text-center"><strong>已選課程</strong></button>
+                    <button type="button" class="list-group-item list-group-item-action text-center"><i class="fa fa-camera"></i><strong>拍照</strong></button>
+                    </div>
+                </div>
+               
+
+            </div>
+            <div class="card col-md-8">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>
+                               asd
+                            </h3>
+                            <p>
+                                Is just another friendly dog.
+                            </p>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <h3>
+                                Rocky
+                            </h3>
+                            <p>
+                                Loves catnip and naps. Not fond of children.
+                            </p>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+        $(document).ready(function(){
+            $('#cls').click(function(){
+                $('#choose').toggle(300)
+            })
+        })
+       
+    </script>
+
+</html>
