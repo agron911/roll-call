@@ -14,6 +14,7 @@ const account =require('./router/account')
 mongoose.connect('mongodb://localhost/face');
 
 // start use
+
 app.use(serve(__dirname + '/public'));
 app.use(views(path.join(__dirname, '/views'), { extension: 'ejs' }));
 app.use(logger())

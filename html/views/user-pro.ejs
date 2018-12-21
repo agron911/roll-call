@@ -11,8 +11,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
+    <style>
+        #profile{
+            background-color: royalblue
+        }
+        #func{
+            list-style:none;
+            background-color:royalblue
+        }
     </style>
 
 </head>
@@ -42,10 +50,10 @@
                 <!--left col-->
                 <div class="card">
                     <div class="card-body p-0">
-                        <li class="list-group-item text-center">
-                            <h4>Profile</h4>
+                        <li class="list-group-item text-center" id="profile">
+                            <h4 >Profile</h4>
                         </li>
-                        <dd class="list-group-item"><strong>名字</strong><i class="fa fa-pencil float-right"></i><span
+                        <dd class="list-group-item" ><strong>名字</strong><i class="fa fa-pencil float-right"></i><span
                                 class="float-right">承寰 </span></dd>
                         <dd class="list-group-item"><strong>ID</strong><span class="float-right">11111</span></dd>
 
@@ -55,14 +63,14 @@
 
                 <div class="card  " style="margin-top:30px">
                     <div class="card-body p-0 list-group">
-                        <li class="list-group-item text-center" style="list-style:none">
+                        <li class="list-group-item text-center" id="func">
                             <h4>功能表</h4>
                         </li>
-                        <button type="button" id="cls" class="list-group-item list-group-item-action text-center"><i
+                        <button type="button" id="cls" class="list-group-item list-group-item-action text-center" style="background-color:#f4f4f4"><i
                                 class="fa fa-book"></i><strong>課程</strong></button>
                         <button type="button" id="choose" style="display: none" class="list-group-item list-group-item-action text-center"><strong>開設課程</strong></button>
                         <button type="button" id="choose1" style="display: none" class="list-group-item list-group-item-action text-center"><strong>已開課程</strong></button>
-                        <button type="button" class="list-group-item list-group-item-action text-center"><i class="fa fa-camera"></i><strong>拍照</strong></button>
+                        <button type="button" class="list-group-item list-group-item-action text-center"style="background-color:#f4f4f4"><i class="fa fa-camera"></i><strong>拍照</strong></button>
                     </div>
                 </div>
 
@@ -70,26 +78,17 @@
             </div>
             <div id="main" class="card col-md-8">
                 <div class="card-body col-md-8">
-                    <h3>
-                        這是一個教授使用者介面
-                    </h3>
-                    <p>
-                        開始操作時，可於開設課程中點選開課課程，開放給所有學生點選。
-                    </p>
+                    <h3>這是一個教授使用者介面</h3>
+                    <p>開始操作時，可於開設課程中點選開課課程，開放給所有學生點選。</p>
                 </div>
                 <div class="card-body col-md-8">
-                    <h3>
-                        製作小組
-                    </h3>
-                    <p>
-                        TEAMWORK
-                    </p>
-                    <p>
-                    </p>
+                    <h3>製作小組</h3>
+                    <p>TEAMWORK </p>
+                    <p></p>
                 </div>
             </div>
             <div id="open" class="card col-md-8" style="display: none">
-                <div class="card-body col-md-8">
+                <div class="card-body col-md-12">
                     <form>
                         <div class="form-row">
                             <div class="col-md-10 mb-3">
@@ -123,9 +122,13 @@
                             </div>
 
                             <div class="dropdown" style="margin-left:20px">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
+                                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu2"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     選擇開始上課節數
+                                </button>
+                                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    選擇結束上課節數
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                                     <button class="dropdown-item" type="button">第一節</button>

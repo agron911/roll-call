@@ -13,11 +13,10 @@ router
         await ctx.render('login',{user_option:'Professor'})
     })
     .get('/Student_register',async function(ctx){
-        await ctx.render('register')
-        ctx.body='123'
+        await ctx.render('register',{user_option:'Student'})
     })
     .get('/Professor_register',async function(ctx){
-        ctx.body='123';
+        await ctx.render('register',{user_option:'Professor'})
     })
     .get('/face',async function(ctx){
         await ctx.render('face')
