@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.0/semantic.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
@@ -51,9 +54,9 @@
                 <div class="card">
                     <div class="card-body p-0">
                         <li class="list-group-item text-center" id="profile">
-                            <h4 >Profile</h4>
+                            <h4>Profile</h4>
                         </li>
-                        <dd class="list-group-item" ><strong>名字</strong><i class="fa fa-pencil float-right"></i><span
+                        <dd class="list-group-item"><strong>名字</strong><i class="fa fa-pencil float-right"></i><span
                                 class="float-right">承寰 </span></dd>
                         <dd class="list-group-item"><strong>ID</strong><span class="float-right">11111</span></dd>
 
@@ -70,7 +73,8 @@
                                 class="fa fa-book"></i><strong>課程</strong></button>
                         <button type="button" id="choose" style="display: none" class="list-group-item list-group-item-action text-center"><strong>開設課程</strong></button>
                         <button type="button" id="choose1" style="display: none" class="list-group-item list-group-item-action text-center"><strong>已開課程</strong></button>
-                        <button type="button" class="list-group-item list-group-item-action text-center"style="background-color:#f4f4f4"><i class="fa fa-camera"></i><strong>拍照</strong></button>
+                        <button type="button" class="list-group-item list-group-item-action text-center" style="background-color:#f4f4f4"><i
+                                class="fa fa-camera"></i><strong>拍照</strong></button>
                     </div>
                 </div>
 
@@ -104,9 +108,10 @@
                                     required>
                             </div>
                         </div>
-                        <label for="validationDefault03">上課日期</label>
+                        <label ></label>
+
                         <div class="form-row">
-                            <div class="input-append btn-group ">
+                            <!-- <div class="input-append btn-group ">
                                 <input id="validationDefault03" size="16" type="text" placeholder="星期一">
                                 <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#" style="border-radius: 7px; margin-right:10px">
                                 </a>
@@ -119,10 +124,19 @@
                                     <li><a href="#"> 星期六</a></li>
                                     <li><a href="#"> 星期日</a></li>
                                 </ul>
+                            </div> -->
+                            <div class="form-group has-float-label ">
+                                    上課日期<select class="form-control custom-select" id="day" style="margin-top:5px">
+                                    <option selected>星期一</option>
+                                    <option>星期二</option>
+                                    <option>星期三</option>
+                                    <option>星期四</option>
+                                    <option>星期五</option>
+                                    <option>星期六</option>
+                                    <option>星期日</option>
+                                </select>
                             </div>
-
-                            <div class="dropdown" style="margin-left:20px">
-                                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu2"
+                                <!-- <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu2"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     選擇開始上課節數
                                 </button>
@@ -140,9 +154,36 @@
                                     <button class="dropdown-item" type="button">第七節</button>
                                     <button class="dropdown-item" type="button">第八節</button>
                                     <button class="dropdown-item" type="button">第九節</button>
+                                </div> -->
+                                                       
+                                <div class="form-group has-float-label" style="margin:0 0 0 20px">
+                                        開始上課節數<select class="form-control custom-select" id="startcls"style="margin-top:5px">
+                                            
+                                        <option selected>第一節</option>
+                                        <option>第二節</option>
+                                        <option>第三節</option>
+                                        <option>第四節</option>
+                                        <option>第五節</option>
+                                        <option>第六節</option>
+                                        <option>第七節</option>
+                                        <option>第八節</option>
+                                        <option>第九節</option>
+                                    </select>
                                 </div>
+                                <div class="form-group has-float-label"style="margin-left:20px">
+                                        結束上課節數<select class="form-control custom-select" id="endcls"style="margin-top:5px">
+                                            <option selected>第一節</option>
+                                            <option>第二節</option>
+                                            <option>第三節</option>
+                                            <option>第四節</option>
+                                            <option>第五節</option>
+                                            <option>第六節</option>
+                                            <option>第七節</option>
+                                            <option>第八節</option>
+                                            <option>第九節</option>
+                                        </select>
+                                    </div>
                             </div>
-                        </div>
                     </form>
                     <button class="btn btn-primary" type="submit" style="margin-top:20px">Submit form</button>
                     </form>
