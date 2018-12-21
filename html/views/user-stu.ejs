@@ -95,14 +95,8 @@
                 </div>
             </div>
             <div id="open" class="card col-md-8" style="display:none">
-                <!-- <div class="card-body list-group col-md-4">
-                    <button type="button"class="list-group-item list-group-item-action list-group-item-light text-center"><strong>陳鍾誠教授</strong></button>
-                    <button type="button"class="list-group-item list-group-item-action list-group-item-light text-center"><strong>柯志亨教授</strong></button>
-                    <button type="button"class="list-group-item list-group-item-action list-group-item-secondary text-center"><strong>李錫捷教授</strong></button>
-                </div> -->
-
                 <div class="row ">
-                    <div class="col-4">
+                    <div class="col-4" style="margin:10px 0 10px 0">
                         <div class="list-group" >
                             <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-Prof">教授</a>
                             <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-ProfCCC">陳鍾誠教授</a>
@@ -131,7 +125,127 @@
                     </div>
                 </div>
             </div>
-
+            <div id="open1" class="card col-md-8" style="display: none">
+                    <div class="card-body col-md-12">
+                        <table BORDER="2" align=center class="bootstrap table col-md-12">
+                            <tr>
+                                <td>節次/星期</td>
+                                <td>星期一</td>
+                                <td>星期二</td>
+                                <td>星期三</td>
+                                <td>星期四</td>
+                                <td>星期五</td>
+                                <td>星期六</td>
+                                <td>星期日</td>
+                            </tr>
+                            <tr>
+                                <td>第一節</td>
+                                <td>通識教育</td>
+                                <td> </td>
+                                <td> </td>
+                                <td>微積分</td>
+                                <td>線性代數</td>
+                                <td> </td>
+                                <td>微積分</td>
+                            </tr>
+                            <tr>
+                                <td>第二節</td>
+                                <td>通識教育</td>
+                                <td>離散數學</td>
+                                <td>英文(一)</td>
+                                <td>微積分</td>
+                                <td>線性代數</td>
+                                <td> </td>
+                                <td>微積分</td>
+                            </tr>
+                            <tr>
+                                <td>第三節</td>
+                                <td></td>
+                                <td>離散數學</td>
+                                <td>英文(一)</td>
+                                <td>微積分</td>
+                                <td>線性代數</td>
+                                <td> </td>
+                                <td>微積分</td>
+                            </tr>
+                            <tr>
+                                <td>第四節</td>
+                                <td> </td>
+                                <td>體育(一)</td>
+                                <td>計算機概論</td>
+                                <td>數位邏輯設計</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>第五節</td>
+                                <td></td>
+                                <td>體育(一)</td>
+                                <td>計算機概論</td>
+                                <td>數位邏輯設計</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>第六節</td>
+                                <td></td>
+                                <td></td>
+                                <td>計算機概論</td>
+                                <td></td>
+                                <td></td>
+                                <td>數位邏輯設計</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>第七節</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>第八節</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>第九節</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>第十節</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+    
+    
+                        </table>
+                    </div>
+                    <div class="card-body col-md-4">
+    
+                    </div>
+                </div>
         </div>
     </div>
 
@@ -143,12 +257,15 @@
             $('#choose').toggle(300)
             $('#choose1').toggle(300)
         })
-    })
-
-    $(document).ready(function () {
         $('#choose').click(function () {
             $('#open').toggle(300)
             $('#main').hide()
+            $('#open1').hide()
+        })
+        $('#choose1').click(function () {
+            $('#open1').toggle(300)
+            $('#main').hide();
+            $('#open').hide();
         })
     })
 
