@@ -23,8 +23,8 @@ router
         
     })
     .get('/Professoruser',async function(ctx){
-        await ctx.render('user-pro',{user_option:'professor'})
+        await ctx.render('user-pro')
     })
     .get('/Studentuser',async function(ctx){
-        await ctx.render('user-stu',{user_option:'student'})
+        await ctx.render('user-stu')
     })
