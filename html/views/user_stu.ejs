@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.12.0/semantic.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -45,7 +43,7 @@
                         <button type="submit" class="btn btn-default">搜尋</button>
                     </div>
                     <div class="right menu">
-                        <a href="/users/logout" class="item">登出</a>
+                        <a href="/logout" class="item">登出</a>
                     </div>
                 </div>
             </div>
@@ -59,9 +57,9 @@
                         <li class="list-group-item text-center" id="profile">
                             <h4>Profile</h4>
                         </li>
-                        <dd class="list-group-item"><strong>名字</strong><i class="fa fa-pencil float-right"></i><span
-                                class="float-right">承寰 </span></dd>
-                        <dd class="list-group-item"><strong>學號</strong><span class="float-right">11111</span></dd>
+                        <dd class="list-group-item"><strong>名字</strong><span
+                                class="float-right"><%= profile.name %> </span></dd>
+                        <dd class="list-group-item"><strong>學號</strong><span class="float-right"><%= profile.ID %></span></dd>
 
 
                     </div>
@@ -76,8 +74,8 @@
                                 class="fa fa-book"></i><strong>課程</strong></button>
                         <button type="button" id="choose" style="display: none" class="list-group-item list-group-item-action text-center"><strong>選擇課程</strong></button>
                         <button type="button" id="choose1" style="display: none" class="list-group-item list-group-item-action text-center"><strong>已選課程</strong></button>
-                        <button type="button" class="list-group-item list-group-item-action text-center" style="background-color:#f4f4f4"><i
-                                class="fa fa-camera"></i><strong>拍照</strong></button>
+                        <a href="/face" class="list-group-item list-group-item-action text-center" style="background-color:#f4f4f4"><i
+                                class="fa fa-camera"></i><strong>拍照</strong></a>
                     </div>
                 </div>
 
@@ -95,10 +93,11 @@
                 </div>
             </div>
             <div id="open" class="card col-md-8" style="display:none">
+
                 <div class="row ">
-                    <div class="col-4" style="margin:10px 0 10px 0">
+                    <div class="col-4">
                         <div class="list-group" >
-                            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#list-Prof">教授</a>
+                            <a class="list-group-item list-group-item-action  disabled" data-toggle="list" href="#list-Prof">教授</a>
                             <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-ProfCCC">陳鍾誠教授</a>
                             <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-ProKCH">柯志亨教授</a>
                             <a class="list-group-item list-group-item-action" data-toggle="list" href="#list-ProfLCC">李錫捷教授</a>
@@ -125,127 +124,7 @@
                     </div>
                 </div>
             </div>
-            <div id="open1" class="card col-md-8" style="display: none">
-                    <div class="card-body col-md-12">
-                        <table BORDER="2" align=center class="bootstrap table col-md-12">
-                            <tr>
-                                <td>節次/星期</td>
-                                <td>星期一</td>
-                                <td>星期二</td>
-                                <td>星期三</td>
-                                <td>星期四</td>
-                                <td>星期五</td>
-                                <td>星期六</td>
-                                <td>星期日</td>
-                            </tr>
-                            <tr>
-                                <td>第一節</td>
-                                <td>通識教育</td>
-                                <td> </td>
-                                <td> </td>
-                                <td>微積分</td>
-                                <td>線性代數</td>
-                                <td> </td>
-                                <td>微積分</td>
-                            </tr>
-                            <tr>
-                                <td>第二節</td>
-                                <td>通識教育</td>
-                                <td>離散數學</td>
-                                <td>英文(一)</td>
-                                <td>微積分</td>
-                                <td>線性代數</td>
-                                <td> </td>
-                                <td>微積分</td>
-                            </tr>
-                            <tr>
-                                <td>第三節</td>
-                                <td></td>
-                                <td>離散數學</td>
-                                <td>英文(一)</td>
-                                <td>微積分</td>
-                                <td>線性代數</td>
-                                <td> </td>
-                                <td>微積分</td>
-                            </tr>
-                            <tr>
-                                <td>第四節</td>
-                                <td> </td>
-                                <td>體育(一)</td>
-                                <td>計算機概論</td>
-                                <td>數位邏輯設計</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>第五節</td>
-                                <td></td>
-                                <td>體育(一)</td>
-                                <td>計算機概論</td>
-                                <td>數位邏輯設計</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>第六節</td>
-                                <td></td>
-                                <td></td>
-                                <td>計算機概論</td>
-                                <td></td>
-                                <td></td>
-                                <td>數位邏輯設計</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>第七節</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>第八節</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>第九節</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>第十節</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-    
-    
-                        </table>
-                    </div>
-                    <div class="card-body col-md-4">
-    
-                    </div>
-                </div>
+
         </div>
     </div>
 
@@ -257,19 +136,13 @@
             $('#choose').toggle(300)
             $('#choose1').toggle(300)
         })
+    })
+    $(document).ready(function () {
         $('#choose').click(function () {
             $('#open').toggle(300)
             $('#main').hide()
-            $('#open1').hide()
-        })
-        $('#choose1').click(function () {
-            $('#open1').toggle(300)
-            $('#main').hide();
-            $('#open').hide();
         })
     })
-
-
 </script>
 
 </html>

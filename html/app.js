@@ -1,4 +1,3 @@
-//require everything
 const Koa=require('koa')
 const app=new Koa()
 const logger = require('koa-logger')
@@ -14,11 +13,10 @@ const account =require('./router/account')
 mongoose.connect('mongodb://localhost/face');
 
 // start use
-
 app.use(serve(__dirname + '/public'));
 app.use(views(path.join(__dirname, '/views'), { extension: 'ejs' }));
 app.use(logger())
-app.use(koaBody())
+app.use(koaBody({ multipart: true }));
 app.keys = ['key1'];
 app.use(session(app));
 
